@@ -1,0 +1,19 @@
+<div class="card-list-box">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h3>Trending Dares</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let card of cardList">
+          <div class="card-list-item-content">
+            <span class="m-0 mr-1">{{card}}</span>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
