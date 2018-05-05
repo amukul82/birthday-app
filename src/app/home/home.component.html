@@ -1,23 +1,12 @@
 <div class="home">
   <div class="main left-main">
-    <card-list-box></card-list-box>
   </div>
   <div class="main center-main">
-    <div *ngFor="let post of postList">
-      <post-box [post]="post"></post-box>
+    <div class="section" fxLayout="row" fxLayout.xs="column" *ngFor="let item of postList | groupBy:'sectionId'">
+      <post-box fxFlex="50%;" fxFlex.xs="100%" *ngFor="let post of item.value" [post]="post"></post-box>
     </div>
   </div>
   <div class="main right-main">
-    <div class="sign-up-box">
-      <mat-card class="text-center">
-        <mat-card-header>
-          <mat-card-title><h3>New to Dare Twitter?</h3></mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <h4>Sign up now to get your own personalized timeline!</h4>
-        </mat-card-content>
-      </mat-card>
-    </div>
   </div>
 </div>
 

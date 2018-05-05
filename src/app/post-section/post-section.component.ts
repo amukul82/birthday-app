@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'card-list-box',
-  templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.css']
+  selector: 'post-section-box',
+  templateUrl: './post-section.component.html',
+  styleUrls: ['./post-section.component.css']
 })
-export class CardListComponent implements OnInit {
+export class PostSectionComponent implements OnInit {
   cardList: any[];
 
   constructor() {

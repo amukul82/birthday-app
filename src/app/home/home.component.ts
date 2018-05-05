@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CardListComponent } from '../card-list/card-list.component';
 import { PostComponent } from '../post/post.component';
 import { HomeService } from './home.service';
 
@@ -12,11 +11,23 @@ import { HomeService } from './home.service';
 })
 export class HomeComponent implements OnInit {
   postList: any[];
+  postListForSection: any[];
+  index: 0;
 
   constructor(private _homeService: HomeService) { }
 
   ngOnInit() {
     this.postList = this._homeService.getPosts();
+  }
+
+  getNextpostListForSection() {
+    this.postListForSection = [];
+    this.postListForSection.push(this.postList[this.index]);
+    this.index++;
+    this.postListForSection.push(this.postList[this.index]);
+    this.index++;
+    console.log(this.index);
+    return this.postListForSection;
   }
 
 }
