@@ -1,9 +1,11 @@
 <div class="home">
   <div class="main left-main">
   </div>
-  <div class="main center-main">
-    <div class="section" fxLayout="row" fxLayout.xs="column" *ngFor="let item of postList | groupBy:'sectionId'">
-      <post-box fxFlex="50%;" fxFlex.xs="100%" *ngFor="let post of item.value" [post]="post"></post-box>
+  <div class="main center-main" fxLayout="row" fxLayout.xs="column">
+    <div class="section" fxLayout="column" fxFlex="50%;" fxFlex.xs="100%" *ngFor="let item of postList | groupBy:'sectionId'">
+      <div *ngFor="let post of item.value">
+        <post-box [post]="post"></post-box>
+      </div>
     </div>
   </div>
   <div class="main right-main">

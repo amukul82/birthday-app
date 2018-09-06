@@ -2,6 +2,7 @@
   flex-flow: row; 
   box-sizing: border-box; 
   display: flex;
+  /*background: #cfe7f6;*/
 }
 .main { 
   box-sizing: border-box; 

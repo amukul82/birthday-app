@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Howl } from 'howler';
 
 import { PostComponent } from '../post/post.component';
 import { HomeService } from './home.service';
@@ -18,6 +19,13 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.postList = this._homeService.getPosts();
+    var sound = new Howl({
+      src: ['https://s3.amazonaws.com/tanmay-bucket-edp/mukul/hbd.mp3'],
+      html5: true,
+      //autoplay: true,
+      loop: true
+    });
+    //sound.load();
   }
 
   getNextpostListForSection() {

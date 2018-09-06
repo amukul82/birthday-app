@@ -9,7 +9,8 @@ import {
   MatIconModule, 
   MatChipsModule, 
   MatListModule, 
-  MatSidenavModule 
+  MatSidenavModule,
+  MatGridListModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -46,6 +47,7 @@ import { GroupByPipe } from './_utils/group-by.pipe';
     MatChipsModule,
     MatListModule,
     MatSidenavModule,
+    MatGridListModule,
     FlexLayoutModule
   ],
   providers: [],

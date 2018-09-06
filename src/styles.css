@@ -15,6 +15,12 @@ h2, h3 {
 body, input[text], button {
   color: black;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  /*background: #cfe7f6;*/
+  background-image: url("assets/images/27127080-balloons-wallpapers.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .form-group {
     font-size: 100%;
